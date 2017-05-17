@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width">
   <!-- Isotope does not require any CSS files -->
   <link rel="stylesheet" href="css/isotope-docs.css?3" media="screen">
+
 </head>
 
 
@@ -53,7 +54,7 @@
 
 
 
-
+        <!--not sure what this is-->
 
         <pre class="code-display"><code>$grid.isotope({
   itemSelector: <span class="string">&apos;.element-item&apos;</span>,
@@ -299,6 +300,39 @@
         <!--block end-->
 
 
+        <!--this is pullout content-->
+
+        <div id="gridder-content-1" class="gridder-content">
+          <div class="row">
+            <div class="col-sm-6">
+              <img src="http://placehold.it/600x600" class="img-responsive" />
+            </div>
+            <div class="col-sm-6">
+              <h2>Item 1</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ex augue, hendrerit sed gravida ut, mattis
+                vel tortor. Duis hendrerit sagittis bibendum. Fusce massa risus, hendrerit et est vitae, convallis accumsan
+                ipsum. Integer vitae erat mattis, ornare tortor nec, luctus turpis. Cum sociis natoque penatibus et magnis
+                dis parturient montes, nascetur ridiculus mus. Suspendisse finibus fermentum consectetur. Nulla vestibulum,
+                diam ut finibus dictum, justo felis blandit mi, sed rhoncus tortor augue vitae orci. Fusce semper eu ante
+                ut faucibus.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ex augue, hendrerit sed gravida ut, mattis
+                vel tortor. Duis hendrerit sagittis bibendum. Fusce massa risus, hendrerit et est vitae, convallis accumsan
+                ipsum. Integer vitae erat mattis, ornare tortor nec, luctus turpis. Cum sociis natoque penatibus et magnis
+                dis parturient montes, nascetur ridiculus mus. Suspendisse finibus fermentum consectetur. Nulla vestibulum,
+                diam ut finibus dictum, justo felis blandit mi, sed rhoncus tortor augue vitae orci. Fusce semper eu ante
+                ut faucibus.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ex augue, hendrerit sed gravida ut, mattis
+                vel tortor. Duis hendrerit sagittis bibendum. Fusce massa risus, hendrerit et est vitae, convallis accumsan
+                ipsum. Integer vitae erat mattis, ornare tortor nec, luctus turpis. Cum sociis natoque penatibus et magnis
+                dis parturient montes, nascetur ridiculus mus. Suspendisse finibus fermentum consectetur. Nulla vestibulum,
+                diam ut finibus dictum, justo felis blandit mi, sed rhoncus tortor augue vitae orci. Fusce semper eu ante
+                ut faucibus.</p>
+            </div>
+          </div>
+        </div>
+
+
+
       </div>
 
     </div>
@@ -306,22 +340,16 @@
   </div>
 
   <div id="content" class="main">
-
-    <div class="container">
-
-
-    </div>
+    <div class="container"> </div>
   </div>
 
   <footer class="site-footer">
-
     <div class="container">
-
     </div>
-
     </div>
-
   </footer>
+
+
 
   <!-- Looking for isotope.js? Use isotope.pkgd.min.js -->
   <!-- Isotope does NOT require jQuery. But it does make things easier -->
@@ -331,6 +359,55 @@
   </script>
 
   <script src="js/isotope-docs.min.js?3"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--gridder stuff-->
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
+  <script src="dist/js/jquery.gridder.js"></script>
+
+  <script>
+    $(function () {
+
+      // Call Gridder
+      $('.gridder').gridderExpander({
+        scroll: true,
+        scrollOffset: 30,
+        scrollTo: "panel",                  // panel or listitem
+        animationSpeed: 400,
+        animationEasing: "easeInOutExpo",
+        showNav: true,                      // Show Navigation
+        nextText: "Next",                   // Next button text
+        prevText: "Previous",               // Previous button text
+        closeText: "Close",                 // Close button text
+        onStart: function () {
+          //Gridder Inititialized
+        },
+        onContent: function () {
+          //Gridder Content Loaded
+        },
+        onClosed: function () {
+          //Gridder Closed
+        }
+      });
+
+    });
+  </script>
+
+  <!--end of gridder stuff-->
 
 
 </body>
