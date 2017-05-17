@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <meta name="description" content="filter &amp; sort magical layouts">
 
-  <title>Isotope</title>
+  <title>Isotope &#xB7; Sorting</title>
 
     <!-- Isotope does not require any CSS files -->
     <link rel="stylesheet" href="css/isotope-docs.css?3" media="screen">
@@ -14,11 +14,11 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@metafizzyco">
   <meta name="twitter:url" content="http://isotope.metafizzy.co/.html">
-  <meta name="twitter:title" content="Isotope">
+  <meta name="twitter:title" content="Isotope Sorting">
   <meta name="twitter:description" content="filter &amp; sort magical layouts">
 
 </head>
-<body class="page--index">
+<body class="page--sorting">
 
   <div class="nav">
     <h1 class="nav__title"><a href=".">Isotope</a></h1>
@@ -69,87 +69,38 @@
     </ol>
   
     <ul class="page-nav" data-js="page-nav">
-<li class="page-nav__item page-nav__item--h2"><a href="#install">Install</a></li>
-<li class="page-nav__item page-nav__item--h3"><a href="#download">Download</a></li>
-<li class="page-nav__item page-nav__item--h3"><a href="#cdn">CDN</a></li>
-<li class="page-nav__item page-nav__item--h3"><a href="#package-managers">Package managers</a></li>
-<li class="page-nav__item page-nav__item--h2"><a href="#license">License</a></li>
-<li class="page-nav__item page-nav__item--h3"><a href="#commercial-license">Commercial license</a></li>
-<li class="page-nav__item page-nav__item--h3"><a href="#open-source-license">Open source license</a></li>
-<li class="page-nav__item page-nav__item--h2"><a href="#getting-started">Getting started</a></li>
-<li class="page-nav__item page-nav__item--h3"><a href="#html">HTML</a></li>
-<li class="page-nav__item page-nav__item--h3"><a href="#css">CSS</a></li>
-<li class="page-nav__item page-nav__item--h3"><a href="#initialize-with-jquery">Initialize with jQuery</a></li>
-<li class="page-nav__item page-nav__item--h3"><a href="#initialize-with-vanilla-javascript">Initialize with Vanilla JavaScript</a></li>
-<li class="page-nav__item page-nav__item--h3"><a href="#initialize-in-html">Initialize in HTML</a></li>
-<li class="page-nav__item page-nav__item--h2"><a href="#next">Next</a></li>
-<li class="page-nav__item page-nav__item--h2"><a href="#isotope-in-use">Isotope in use</a></li>
+<li class="page-nav__item page-nav__item--h2"><a href="#html">HTML</a></li>
+<li class="page-nav__item page-nav__item--h2"><a href="#getsortdata">getSortData</a></li>
+<li class="page-nav__item page-nav__item--h3"><a href="#getsortdata-strings">getSortData strings</a></li>
+<li class="page-nav__item page-nav__item--h3"><a href="#getsortdata-functions">getSortData functions</a></li>
+<li class="page-nav__item page-nav__item--h2"><a href="#sortby">sortBy</a></li>
+<li class="page-nav__item page-nav__item--h3"><a href="#multiple-sortby">Multiple sortBy</a></li>
+<li class="page-nav__item page-nav__item--h2"><a href="#sortascending">sortAscending</a></li>
+<li class="page-nav__item page-nav__item--h2"><a href="#updatesortdata">updateSortData</a></li>
+<li class="page-nav__item page-nav__item--h2"><a href="#ui">UI</a></li>
 </ul>
   </div>
 
-<div class="hero">
-  <div class="container">
 
-    <h1 class="hero__title">Isotope</h1>
-
-    <p class="hero__tagline">Filter &amp; sort magical layouts</p>
-
-    <p class="hero__gh-button">
-      <a class="gh-button" href="https://github.com/metafizzy/isotope" data-js="gh-button">
-        <span class="gh-button__title">
-          <svg class="gh-button__icon gh-button__icon--github-logo" viewbox="0 0 512 512">
-            <path d="M256 0C115 0 0 115 0 256c0 113 73 209 175 243 13 2 18-5 18-12v-48c-64 12-81-16-86-30-3-7-15-30-26-36-9-5-22-17 0-17 20 0 35 19 39 26 23 39 60 28 75 21 2-17 9-28 16-34-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-33 3-68 0 0 21-7 70 26 20-6 42-9 64-9s43 3 64 9c49-33 70-26 70-26 14 35 5 61 3 68 16 18 26 41 26 69 0 98-60 120-117 126 9 8 17 23 17 47v70c0 7 5 15 18 12 100-33 173-129 173-242C512 115 397 0 256 0z"/>
-          </svg>
-          <span class="gh-button__title__text">Isotope on GitHub</span>
-        </span>
-        <span class="gh-button__stat">
-          <svg class="gh-button__icon gh-button__icon--star" viewbox="0 0 896 1024">
-            <path d="M896 384l-313-41L448 64 313 343 0 384l230 208L171 895l277-149 277 148L665 593 896 384z"/>
-          </svg>
-          <span class="gh-button__stat__text">6,931</span>
-        </span>
-      </a>
-    </p>
-
-    <div class="duo">
-      <div class="duo__cell">
-        <a class="hero__big-button" href="isotope.pkgd.min.js">
-          <svg class="hero__button-icon" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewbox="0 0 200 200">
-            <path class="st0" d="M177.4 53.1c-1.2 3-4.2 4.9-7.4 4.9h-40c-4.4 0-8-3.6-8-8V10c0-3.2 1.9-6.2 4.9-7.4 3-1.2 6.4-.6 8.7 1.7l40 40c2.3 2.3 3 5.8 1.8 8.8zM178 71v109c0 9.9-8.1 18-18 18H40c-9.9 0-18-8.1-18-18V20c0-9.9 8.1-18 18-18h69v48c0 11.6 9.4 21 21 21h48zm-90.1 47.5V94.8H77.1v45.8c0 1.9 0 3.9-.5 5.7-1.1 3.9-4.8 4.6-8.3 3.7l-.9 9.2c4.6 1 10.1.9 14.2-1.8 4.7-3.1 5.9-8.6 6.3-13.9.4-8.4 0-16.8 0-25zm1.6-38.4c0-8.4-13.9-8.5-13.9 0s13.9 8.4 13.9 0zm19.1 24.7c1-2.8 5.1-3.3 7.7-3.1 3.3.3 6.5 2 8.5 4.6l7-6.2c-4.7-6-13.9-7.5-21-6.1-6.6 1.3-12.2 5.7-12.4 12.8-.1 3.2.8 6.3 3.3 8.5 2.5 2.3 5.8 3.3 9 4.1 2.7.7 5.8 1.2 8.3 2.6 2.4 1.3 2.9 4.7 1 6.7-2.2 2.4-6.3 2.4-9.2 1.7-3-.7-5.8-2.6-7.7-5-2.4 2.2-4.7 4.4-7.1 6.7 5.4 5.9 14 7.9 21.7 6.9 6.3-.8 12.5-4.1 13.7-10.9.6-3.2.4-6.6-1.5-9.4-1.8-2.7-4.8-4.4-7.8-5.5-3.3-1.1-6.7-1.7-10-2.8-2.5-.9-4.6-2.6-3.5-5.6z"/>
-          </svg>
-          Download isotope.&#x200B;pkgd.&#x200B;min.js
-        </a>
-      </div>
+  <div id="content" class="main">
+    <div class="container">
+        <h1>Sorting</h1>
 
 
-    </div>
+<p>Isotope can rearrange the order of item elements based on their data.</p>
 
-<div class="big-demo" data-js="hero-demo">
+<div class="big-demo go-wide" data-js="sorting-demo">
 
-  <div class="ui-group">
-    <h3 class="ui-group__title">Filter</h3>
-    <div class="filters button-group js-radio-button-group">
-      <button class="button is-checked" data-filter="*">show all</button>
-      <button class="button" data-filter=".metal">metal</button>
-      <button class="button" data-filter=".transition">transition</button>
-      <button class="button" data-filter="ium">&#x2013;ium</button>
-    </div>
-  </div>
-  <div class="ui-group">
-    <h3 class="ui-group__title">Sort</h3>
-    <div class="sort-by button-group js-radio-button-group">
-      <button class="button is-checked" data-sort-by="original-order">original order</button>
-      <button class="button" data-sort-by="name">name</button>
-      <button class="button" data-sort-by="symbol">symbol</button>
-      <button class="button" data-sort-by="number">number</button>
-    </div>
+  <div class="button-group sort-by-button-group js-radio-button-group">
+    <button class="button is-checked" data-sort-by="original-order">original order</button>
+    <button class="button" data-sort-by="name">name</button>
+    <button class="button" data-sort-by="symbol">symbol</button>
+    <button class="button" data-sort-by="number">number</button>
+    <button class="button" data-sort-by="weight">weight</button>
+    <button class="button" data-sort-by="category">category</button>
   </div>
 
-<pre class="code-display"><code>$grid.isotope({
-  itemSelector: <span class="string">&apos;.element-item&apos;</span>,
-  layoutMode: <span class="string">&apos;fitRows&apos;</span>,
-  ...
-})</code></pre>
+  <pre class="code-display"><code>$grid.isotope({...})</code></pre>
 
   <div class="grid">
       <div class="element-item transition metal " data-category="transition">
@@ -263,257 +214,251 @@
   </div>
 
   <p class="edit-demo">
-      <a href="http://codepen.io/desandro/pen/nFrte">Edit this demo on CodePen</a>
+      <a href="http://codepen.io/desandro/pen/lzCqe">Edit this demo</a>
+      or <a href="http://codepen.io/desandro/pen/Wwabpr">vanilla JS demo</a> on CodePen
   </p>
 </div>
 
-  </div> 
 
-</div> 
+<h2 id="html">HTML</h2>
 
-  <div id="content" class="main">
-    <div class="container">
-
-
-<h2 id="install">Install</h2>
-
-<h3 id="download">Download</h3>
-
-<ul>
-  <li><a href="isotope.pkgd.js">isotope.pkgd.js</a> un-minified, or</li>
-  <li><a href="isotope.pkgd.min.js">isotope.pkgd.min.js</a> minified</li>
-</ul>
-
-<h3 id="cdn">CDN</h3>
-
-<p>Link directly to <a href="https://unpkg.com">unpkg</a>.</p>
-
-<pre><code class="html"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
-<span class="comment">&lt;!-- or --&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
-</code></pre>
-
-<h3 id="package-managers">Package managers</h3>
-
-<p><a href="https://www.npmjs.com/package/isotope-layout">Install with npm</a>: <code>npm install isotope-layout</code></p>
-
-<p>Install with Bower: <code>bower install isotope --save</code></p>
-
-<h2 id="license">License</h2>
-
-<h3 id="commercial-license">Commercial license</h3>
-
-<p>If you want to use Isotope to develop commercial sites, themes, projects, and applications, the Commercial license is the appropriate license. With this option, your source code is kept proprietary. <a href="license.html">Read more about Isotope commercial licensing</a>.</p>
-
-<p>Once purchased, you&#x2019;ll receive a commercial license PDF and be all set to use Isotope in your commercial applications.</p>
-
-<div class="buy-button-trio">
-    <a class="buy-button" href="https://gum.co/isotope-dev">
-      <span class="buy-button__project">Isotope Commercial</span>
-      <span class="buy-button__title">Developer</span>
-      <span class="buy-button__license">License</span>
-      <span class="buy-button__for">for 1 developer</span>
-      <span class="buy-button__price">
-        <span class="buy-button__price__dollar">$</span><span class="buy-button__price__value">25</span>
-      </span>
-    </a>
-
-    <a class="buy-button" href="https://gum.co/isotope-team">
-      <span class="buy-button__project">Isotope Commercial</span>
-      <span class="buy-button__title">Team</span>
-      <span class="buy-button__license">License</span>
-      <span class="buy-button__for">for up to 8 developers</span>
-      <span class="buy-button__price">
-        <span class="buy-button__price__dollar">$</span><span class="buy-button__price__value">110</span>
-      </span>
-    </a>
-
-    <a class="buy-button" href="https://gum.co/isotope-org">
-      <span class="buy-button__project">Isotope Commercial</span>
-      <span class="buy-button__title">Organization</span>
-      <span class="buy-button__license">License</span>
-      <span class="buy-button__for">for Unlimited developers</span>
-      <span class="buy-button__price">
-        <span class="buy-button__price__dollar">$</span><span class="buy-button__price__value">320</span>
-      </span>
-    </a>
-</div>
-
-
-<h3 id="open-source-license">Open source license</h3>
-
-<p>If you are creating an open source application under a license compatible with the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL license v3</a>, you may use Isotope under the terms of the GPLv3. <a href="license.html">Read more about Isotope open source licensing</a>.</p>
-
-
-<h2 id="getting-started">Getting started</h2>
-
-
-<h3 id="html">HTML</h3>
-
-<p>Include the Isotope <code>.js</code> file in your site.</p>
-
-<pre><code class="html"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/path/to/isotope.pkgd.min.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
-</code></pre>
-
-<p>Isotope works on a container element with a group of similar child items.</p>
+<p>All the data used for sorting can be set in the HTML. For the example at the top of the page, each item element has several data points that can be used for sorting.</p>
 
 <pre><code class="html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;grid&quot;</span>&gt;</span>
-  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;grid-item&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;grid-item grid-item--width2&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;grid-item&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;element-item transition metal&quot;</span> <span class="attr">data-category</span>=<span class="string">&quot;transition&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;number&quot;</span>&gt;</span>79<span class="tag">&lt;/<span class="name">p</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">&quot;symbol&quot;</span>&gt;</span>Au<span class="tag">&lt;/<span class="name">h3</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">&quot;name&quot;</span>&gt;</span>Gold<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;weight&quot;</span>&gt;</span>196.966569<span class="tag">&lt;/<span class="name">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;element-item metalloid&quot;</span> <span class="attr">data-category</span>=<span class="string">&quot;metalloid&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;number&quot;</span>&gt;</span>51<span class="tag">&lt;/<span class="name">p</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">&quot;symbol&quot;</span>&gt;</span>Sb<span class="tag">&lt;/<span class="name">h3</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">&quot;name&quot;</span>&gt;</span>Antimony<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;weight&quot;</span>&gt;</span>121.76<span class="tag">&lt;/<span class="name">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
   ...
 <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
 </code></pre>
 
 
-<h3 id="css">CSS</h3>
+<h2 id="getsortdata">getSortData</h2>
 
-<p>All sizing of items is handled by your CSS.</p>
+<p>Isotope reads data from HTML with the <code>getSortData</code> option. <code>getSortData</code> is set with an object. The object&#x2019;s keys are keywords used to sort by. Object values are either a shortcut string or function to retrieve the data.</p>
 
-<pre><code class="css"><span class="selector-class">.grid-item</span> { <span class="attribute">width</span>: <span class="number">25%</span>; }
-<span class="selector-class">.grid-item--width2</span> { <span class="attribute">width</span>: <span class="number">50%</span>; }
-</code></pre>
-
-
-<h3 id="initialize-with-jquery">Initialize with jQuery</h3>
-
-<p>You can use Isotope as a jQuery plugin:
-  <code>$(<span class="string">&apos;selector&apos;</span>).isotope()</code>.</p>
-
-<pre><code class="js">$(<span class="string">&apos;.grid&apos;</span>).isotope({
-  <span class="comment">// options</span>
-  itemSelector: <span class="string">&apos;.grid-item&apos;</span>,
-  <span class="attr">layoutMode</span>: <span class="string">&apos;fitRows&apos;</span>
+<pre><code class="js"><span class="keyword">var</span> <span class="jquery_var">$grid</span> = $(<span class="string">&apos;.grid&apos;</span>).isotope({
+  <span class="attr">getSortData</span>: {
+    <span class="attr">name</span>: <span class="string">&apos;.name&apos;</span>, <span class="comment">// text from querySelector</span>
+    category: <span class="string">&apos;[data-category]&apos;</span>, <span class="comment">// value of attribute</span>
+    weight: <span class="function"><span class="keyword">function</span>(<span class="params"> itemElem </span>) </span>{ <span class="comment">// function</span>
+      <span class="keyword">var</span> weight = $( itemElem ).find(<span class="string">&apos;.weight&apos;</span>).text();
+      <span class="keyword">return</span> <span class="built_in">parseFloat</span>( weight.replace( <span class="regexp">/[\(\)]/g</span>, <span class="string">&apos;&apos;</span>) );
+    }
+  }
 });
 </code></pre>
 
 
-<h3 id="initialize-with-vanilla-javascript">Initialize with Vanilla JavaScript</h3>
+<h3 id="getsortdata-strings">getSortData strings</h3>
 
-<p>You can use Isotope with vanilla JS:
-  <code><span class="keyword">new</span> <span class="isotope_keyword">Isotope</span>( elem, options )</code>.
-  The <code><span class="isotope_keyword">Isotope</span>()</code> constructor accepts two arguments: the container element and an options object.</p>
+<p>When a <code>getSortData</code> value is set to a string, the string will be used as a query selector to get the text of a child element for each item element by default.</p>
 
-<pre><code class="js"><span class="keyword">var</span> elem = <span class="built_in">document</span>.querySelector(<span class="string">&apos;.grid&apos;</span>);
-<span class="keyword">var</span> <span class="isotope_var">iso</span> = <span class="keyword">new</span> <span class="isotope_keyword">Isotope</span>( elem, {
-  <span class="comment">// options</span>
-  itemSelector: <span class="string">&apos;.grid-item&apos;</span>,
-  <span class="attr">layoutMode</span>: <span class="string">&apos;fitRows&apos;</span>
-});
+<pre><code class="js">name: <span class="string">&apos;.name&apos;</span>, <span class="comment">// use text of .name element</span>
+symbol: <span class="string">&apos;.symbol&apos;</span> <span class="comment">// use text of .symbol</span>
+</code></pre>
 
-<span class="comment">// element argument can be a selector string</span>
-<span class="comment">//   for an individual element</span>
-<span class="keyword">var</span> <span class="isotope_var">iso</span> = <span class="keyword">new</span> <span class="isotope_keyword">Isotope</span>( <span class="string">&apos;.grid&apos;</span>, {
-  <span class="comment">// options</span>
-});
+<p>A string wrapped in brackets, like <code><span class="string">&apos;[attribute]&apos;</span></code>, will be used to get the value of an attribute.</p>
+
+<pre><code class="js"><span class="comment">// use value of data-category attribute</span>
+category: <span class="string">&apos;[data-category]&apos;</span>
+</code></pre>
+
+<p>Data values can be parsed into numbers by adding parser keywords to the shortcut string.</p>
+
+<pre><code class="js"><span class="comment">// parse text of .number as an integer</span>
+number: <span class="string">&apos;.number parseInt&apos;</span>,
+<span class="comment">// parse text of .weight as a float</span>
+weight: <span class="string">&apos;.weight parseFloat&apos;</span>
 </code></pre>
 
 
-<h3 id="initialize-in-html">Initialize in HTML</h3>
+<h3 id="getsortdata-functions">getSortData functions</h3>
 
-<p>You can initialize Isotope in HTML, without writing any JavaScript. Add <code>data-isotope</code> attribute to the container element. <a href="options.html">Options</a> can be set in its value.</p>
+<p><code>getSortData</code> values can be set to a function. This function is used on each item element to get data. The function provides one parameter <code>itemElem</code>, which is the item element. The function needs to return the data point.</p>
 
-<pre><code class="html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;grid&quot;</span> <span class="attr">data-isotope</span>=<span class="string">&apos;{ &quot;itemSelector&quot;: &quot;.grid-item&quot;, &quot;layoutMode&quot;: &quot;fitRows&quot; }&apos;</span>&gt;</span>
+<pre><code class="js">weight: <span class="function"><span class="keyword">function</span>(<span class="params"> itemElem </span>) </span>{
+  <span class="comment">// get text of .weight element</span>
+  <span class="keyword">var</span> weight = $( itemElem ).find(<span class="string">&apos;.weight&apos;</span>).text();
+  <span class="comment">// replace parens (), and parse as float</span>
+  <span class="keyword">return</span> <span class="built_in">parseFloat</span>( weight.replace( <span class="regexp">/[\(\)]/g</span>, <span class="string">&apos;&apos;</span>) );
+}
 </code></pre>
 
-<div class="call-out">
-  <p>Options set in HTML must be valid JSON. Keys need to be quoted, for example <code><span class="string">&quot;itemSelector&quot;</span>:</code>. Note the HTML attribute <code>data-isotope</code> is set with single quotes <code>&apos;</code>, but JSON entities use double-quotes <code>&quot;</code>.</p>
+
+<h2 id="sortby">sortBy</h2>
+
+<p>For every property set in <code>getSortData</code>, Isotope can use it for sorting with the <code>sortBy</code> option. The value of <code>sortBy</code> needs to match a key in <code>getSortData</code>. With the properties above, <code>sortBy</code> can be set to
+  <code><span class="string">&apos;name&apos;</span></code>,
+  <code><span class="string">&apos;symbol&apos;</span></code>,
+  <code><span class="string">&apos;number&apos;</span></code>,
+  <code><span class="string">&apos;weight&apos;</span></code>, and
+  <code><span class="string">&apos;category&apos;</span></code>.
+</p>
+
+<pre><code class="js"><span class="jquery_var">$grid</span>.isotope({ <span class="attr">sortBy</span> : <span class="string">&apos;symbol&apos;</span> });
+</code></pre>
+
+<p>Two additional <code>sortBy</code> options are built in.</p>
+
+<pre><code class="js"><span class="jquery_var">$grid</span>.isotope({ <span class="attr">sortBy</span> : <span class="string">&apos;original-order&apos;</span> });
+<span class="comment">// original order of the item elements</span>
+
+<span class="jquery_var">$grid</span>.isotope({ <span class="attr">sortBy</span> : <span class="string">&apos;random&apos;</span> });
+<span class="comment">// random order</span>
+</code></pre>
+
+
+<h3 id="multiple-sortby">Multiple sortBy</h3>
+
+<p>To sort by multiple properties, you can set <code>sortBy</code> to an array. For example, <code>sortBy: [ <span class="string">&apos;color&apos;</span>, <span class="string">&apos;number&apos;</span> ]</code> will sort items by color, <em>then</em> by number.</p>
+
+<div class="duo example go-wide">
+  <div class="duo__cell example__code">
+<pre><code class="html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;grid&quot;</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;grid-item&quot;</span> <span class="attr">data-color</span>=<span class="string">&quot;yellow&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;number&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;grid-item&quot;</span> <span class="attr">data-color</span>=<span class="string">&quot;blue&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;number&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+</code></pre>
+
+<pre><code class="js"><span class="keyword">var</span> <span class="jquery_var">$grid</span> = $(<span class="string">&apos;.grid&apos;</span>).isotope({
+  <span class="attr">getSortData</span>: {
+    <span class="attr">color</span>: <span class="string">&apos;[data-color]&apos;</span>,
+    <span class="attr">number</span>: <span class="string">&apos;.number parseInt&apos;</span>
+  },
+  <span class="comment">// sort by color then number</span>
+  sortBy: [ <span class="string">&apos;color&apos;</span>, <span class="string">&apos;number&apos;</span> ]
+});
+</code></pre>
+  </div>
+
+  <div class="duo__cell example__demo" data-js="multiple-sort-by">
+  
+    <div class="button-group js-radio-button-group">
+      <button class="button is-checked" data-sort-by="color,number">color, number</button>
+      <button class="button" data-sort-by="number,color">number, color</button>
+    </div>
+  
+    <div class="grid">
+      <div class="grid-multi-item" data-color="yellow">
+        <p class="number">3</p>
+      </div>
+      <div class="grid-multi-item" data-color="blue">
+        <p class="number">2</p>
+      </div>
+      <div class="grid-multi-item" data-color="blue">
+        <p class="number">1</p>
+      </div>
+      <div class="grid-multi-item" data-color="yellow">
+        <p class="number">1</p>
+      </div>
+      <div class="grid-multi-item" data-color="yellow">
+        <p class="number">2</p>
+      </div>
+      <div class="grid-multi-item" data-color="blue">
+        <p class="number">3</p>
+      </div>
+      <div class="grid-multi-item" data-color="yellow">
+        <p class="number">2</p>
+      </div>
+      <div class="grid-multi-item" data-color="red">
+        <p class="number">2</p>
+      </div>
+      <div class="grid-multi-item" data-color="red">
+        <p class="number">3</p>
+      </div>
+    </div>
+  
+    <p class="edit-demo">
+        <a href="http://codepen.io/desandro/pen/sxAJL">Edit this demo on CodePen</a>
+    </p>
+  </div>
+
 </div>
 
 
-<h2 id="next">Next</h2>
+<h2 id="sortascending">sortAscending</h2>
 
-<p>Learn more about how to use Isotope:</p>
+<p>By default, Isotope sorts ascendingly: A, B, C and 1, 2, 3. To sort descendingly Z, Y, X, and 9, 8, 7, set <code>sortAscending: <span class="literal">false</span></code>.</p>
 
-<ul>
-  <li><a href="filtering.html">Filtering</a></li>
-  <li><a href="sorting.html">Sorting</a></li>
-  <li><a href="layout.html">Layout</a></li>
-</ul>
+<pre><code class="js"><span class="comment">// sort highest number first</span>
+<span class="jquery_var">$grid</span>.isotope({
+  <span class="attr">sortBy</span>: <span class="string">&apos;number&apos;</span>,
+  <span class="attr">sortAscending</span>: <span class="literal">false</span>
+});
+</code></pre>
 
+<p><code>sortAscending</code> can also be set with an object, so that you can set ascending order for each <code>sortBy</code> value.</p>
 
-<h2 id="isotope-in-use">Isotope in use</h2>
-
-<p>Justin Bieber, <a href="http://www.tylerperry.com/entertainment/">Tyler Perry</a>, <a href="http://colonelsanders.com">Colonel Sanders</a>: they all have used Isotope.</p>
-
-<p>Are you using Isotope? Tweet <a href="https://twitter.com/metafizzyco">@metafizzyco</a> or email <a href="mailto:yo@metafizzy.co">yo@metafizzy.co</a> to share your work and possibly get it featured here.</p>
-
-<div class="in-use-grid go-wide" data-js="in-use-grid">
-  <div class="grid-sizer"></div>
-  <div class="gutter-sizer"></div>
-    <a class="in-use-grid__item" href="https://www.nasa.gov/">
-      <p class="in-use-grid__item__title">NASA</p>
-      <img class="in-use-grid__item__image" src="http://i.imgur.com/w0RCtOp.jpg">
-    </a>
-    <a class="in-use-grid__item" href="http://www.nytimes.com/interactive/2012/12/24/sports/basketball/pick-your-all-time-new-york-city-nba-team.html">
-      <p class="in-use-grid__item__title">New York Times</p>
-      <img class="in-use-grid__item__image" src="http://i.imgur.com/a8DsGOg.jpg">
-    </a>
-    <a class="in-use-grid__item" href="http://malikafavre.com/">
-      <p class="in-use-grid__item__title">Malika Favre</p>
-      <img class="in-use-grid__item__image" src="http://i.imgur.com/0HvLvih.png">
-    </a>
-    <a class="in-use-grid__item" href="http://uk.rimmellondon.com/products/all">
-      <p class="in-use-grid__item__title">Rimmel London</p>
-      <img class="in-use-grid__item__image" src="http://i.imgur.com/ykVIUTD.jpg">
-    </a>
-    <a class="in-use-grid__item" href="http://www.kia.ca/all-vehicles">
-      <p class="in-use-grid__item__title">Kia</p>
-      <img class="in-use-grid__item__image" src="http://i.imgur.com/f86QG9u.jpg">
-    </a>
-    <a class="in-use-grid__item" href="http://www.bbc.com/future/bespoke/20140724-flight-risk/">
-      <p class="in-use-grid__item__title">BBC - Flight Risk</p>
-      <img class="in-use-grid__item__image" src="http://i.imgur.com/zDc6cDu.jpg">
-    </a>
-    <a class="in-use-grid__item" href="http://www.usarugby.org/teams/mens-eagles">
-      <p class="in-use-grid__item__title">USA Rugby</p>
-      <img class="in-use-grid__item__image" src="http://i.imgur.com/82EXhDI.jpg">
-    </a>
-    <a class="in-use-grid__item" href="http://www.tylerperry.com/entertainment/">
-      <p class="in-use-grid__item__title">TylerPerry.com</p>
-      <img class="in-use-grid__item__image" src="http://i.imgur.com/M4WWoiC.jpg">
-    </a>
-    <a class="in-use-grid__item" href="http://www.wholefoodsmarket.com/">
-      <p class="in-use-grid__item__title">Whole Foods Market</p>
-      <img class="in-use-grid__item__image" src="http://i.imgur.com/z6T2zcO.jpg">
-    </a>
-    <a class="in-use-grid__item" href="https://www.ml.com/financial-goals-and-priorities/home.html">
-      <p class="in-use-grid__item__title">Merrill Lynch</p>
-      <img class="in-use-grid__item__image" src="http://i.imgur.com/FRkY3M0.jpg">
-    </a>
-    <a class="in-use-grid__item" href="http://www.gallup.com/">
-      <p class="in-use-grid__item__title">Gallup</p>
-      <img class="in-use-grid__item__image" src="http://i.imgur.com/q8Z1OIf.jpg">
-    </a>
-    <a class="in-use-grid__item" href="http://patchwork.stylehatch.co/">
-      <p class="in-use-grid__item__title">Patchwork</p>
-      <img class="in-use-grid__item__image" src="http://i.imgur.com/d4c5KdG.jpg">
-    </a>
-    <a class="in-use-grid__item" href="http://1407bway.com/">
-      <p class="in-use-grid__item__title">1407 Broadway</p>
-      <img class="in-use-grid__item__image" src="http://i.imgur.com/BjZDpte.jpg">
-    </a>
-    <a class="in-use-grid__item" href="http://explore-kc.com/press.html">
-      <p class="in-use-grid__item__title">Explore KC</p>
-      <img class="in-use-grid__item__image" src="http://i.imgur.com/V8M2dY7.jpg">
-    </a>
-    <a class="in-use-grid__item" href="http://bench.li/">
-      <p class="in-use-grid__item__title">Design Inspiration / Bench.li</p>
-      <img class="in-use-grid__item__image" src="http://i.imgur.com/Jr3XuHp.jpg">
-    </a>
-    <a class="in-use-grid__item" href="http://gimmickbook.com/">
-      <p class="in-use-grid__item__title">Gimmick Book</p>
-      <img class="in-use-grid__item__image" src="http://i.imgur.com/IuLghbY.jpg">
-    </a>
-    <a class="in-use-grid__item" href="http://www.biodroid-entertainment.com/">
-      <p class="in-use-grid__item__title">Biodroid</p>
-      <img class="in-use-grid__item__image" src="http://i.imgur.com/ER6LINu.jpg">
-    </a>
-</div>
+<pre><code class="js"><span class="jquery_var">$grid</span>.isotope({
+  <span class="attr">sortAscending</span>: {
+    <span class="attr">name</span>: <span class="literal">true</span>,
+    <span class="attr">weight</span>: <span class="literal">false</span>,
+    <span class="attr">category</span>: <span class="literal">true</span>,
+    <span class="attr">number</span>: <span class="literal">false</span>
+  }
+});
+</code></pre>
 
 
+<h2 id="updatesortdata">updateSortData</h2>
+
+<p>To update sort data after a change has been made to item elements, use the <a href="methods.html#updatesortdata"><code>updateSortData</code> method</a>.</p>
+
+<pre><code class="js"><span class="jquery_var">$grid</span>.isotope(<span class="string">&apos;updateSortData&apos;</span>).isotope();
+</code></pre>
 
 
+<h2 id="ui">UI</h2>
+
+<p>Let&#x2019;s use a group of buttons for the UI.</p>
+
+<pre><code class="html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;button-group sort-by-button-group&quot;</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">button</span> <span class="attr">data-sort-by</span>=<span class="string">&quot;original-order&quot;</span>&gt;</span>original order<span class="tag">&lt;/<span class="name">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">button</span> <span class="attr">data-sort-by</span>=<span class="string">&quot;name&quot;</span>&gt;</span>name<span class="tag">&lt;/<span class="name">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">button</span> <span class="attr">data-sort-by</span>=<span class="string">&quot;symbol&quot;</span>&gt;</span>symbol<span class="tag">&lt;/<span class="name">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">button</span> <span class="attr">data-sort-by</span>=<span class="string">&quot;number&quot;</span>&gt;</span>number<span class="tag">&lt;/<span class="name">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">button</span> <span class="attr">data-sort-by</span>=<span class="string">&quot;weight&quot;</span>&gt;</span>weight<span class="tag">&lt;/<span class="name">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">button</span> <span class="attr">data-sort-by</span>=<span class="string">&quot;category&quot;</span>&gt;</span>category<span class="tag">&lt;/<span class="name">button</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+</code></pre>
+
+<p>Each button has its <code>sortBy</code> value set in the <code>data-sort-by</code> attribute. In the JS, we can use that value when a button is clicked.</p>
+
+<pre><code class="js"><span class="comment">// init Isotope</span>
+<span class="keyword">var</span> <span class="jquery_var">$grid</span> = <span class="jquery_var">$grid</span>.isotope({
+  <span class="attr">getSortData</span>: {
+    <span class="attr">name</span>: <span class="string">&apos;.name&apos;</span>,
+    <span class="attr">symbol</span>: <span class="string">&apos;.symbol&apos;</span>,
+    <span class="attr">number</span>: <span class="string">&apos;.number parseInt&apos;</span>,
+    <span class="attr">category</span>: <span class="string">&apos;[data-category]&apos;</span>,
+    <span class="attr">weight</span>: <span class="function"><span class="keyword">function</span>(<span class="params"> itemElem </span>) </span>{
+      <span class="keyword">var</span> weight = $( itemElem ).find(<span class="string">&apos;.weight&apos;</span>).text();
+      <span class="keyword">return</span> <span class="built_in">parseFloat</span>( weight.replace( <span class="regexp">/[\(\)]/g</span>, <span class="string">&apos;&apos;</span>) );
+    }
+  }
+});
+
+<span class="comment">// sort items on button click</span>
+$(<span class="string">&apos;.sort-by-button-group&apos;</span>).on( <span class="string">&apos;click&apos;</span>, <span class="string">&apos;button&apos;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+  <span class="keyword">var</span> sortByValue = $(<span class="keyword">this</span>).attr(<span class="string">&apos;data-sort-by&apos;</span>);
+  <span class="jquery_var">$grid</span>.isotope({ <span class="attr">sortBy</span>: sortByValue });
+});
+</code></pre>
 
     </div>
   </div>
