@@ -235,9 +235,9 @@
         animationSpeed: 400,
         animationEasing: "easeInOutExpo",
         showNav: true,
-        nextText: "  ",
-        prevText: "  ",
-        closeText: "  ",
+        nextText: "    ",
+        prevText: "    ",
+        closeText: "    ",
         onStart: function () { },
         onContent: function () { },
         onClosed: function () { }
