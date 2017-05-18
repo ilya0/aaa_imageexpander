@@ -1,27 +1,30 @@
 console.log("addons loaded");
 
-
+var buttonpressed = "none";
 
 $(document).ready(function () {
 
 
-    function showbanner() {
-        console.log("show banners hit")
-        $(".gridder-list").not(".banner").hide();
+    function hideexcept() {
+        alert("hiding all except " + buttonpressed);
+        $(buttonpressed).not(".banner").hide();
+
     }
 
 
 
 
 
-
-
-
     $(".button").click(function () {
-        var buttonpressed = buttonid.val();
-        alert("button" + buttonpressed);
+        buttonpressed = $(this).attr('filtertype')
 
-
-
+        hideexcept();
     });
+
+
+
+
+
+
+
 });
