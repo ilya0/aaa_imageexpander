@@ -17,6 +17,9 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="../addons.js"></script>
+    <link rel="stylesheet" id="aaafb-style-css" href="http://www.aaaflag.com/wp-content/themes/aaafb/style.css?ver=4.7.5" type="text/css"
+        media="all">
+
 </head>
 
 
@@ -30,18 +33,19 @@
         <h1>AAA Banner - Working Sort and Expander</h1>
     </div>
 
-    <div class="ui-group">
-        <h3 class="ui-group__title">Filter</h3>
-        <div class="filters button-group js-radio-button-group">
-            <button class="button is-checked" buttonid="*" filtertype="showall">show all</button>
-            <button class="button" filtertype=".banner" buttonid=".banner">banner</button>
-            <button class="button" filtertype=".flag" buttonid=".flag">flag</button>
-            <button class="button" filtertype=".tent" buttonid=".tent">tent</button>
-            <button class="button" filtertype=".display" buttonid=".display">display</button>
-            <button class="button" filtertype=".other" buttonid="flag">&#x2013;ium</button>
+    <div class="ui-group aaafb-sub-nav-container">
+        <div class="aaafb-sub-nav clearfix">
+
+            <ul class="clearfix">
+                <li class="button is-checked current-menu-item" buttonid="*" filtertype="showall"><a>show all</a></li>
+                <li class="button banner" filtertype=".banner" buttonid=".banner"><a>banner</a></li>
+                <li class="button flag" filtertype=".flag" buttonid=".flag"><a>flag</a></li>
+                <li class="button tent" filtertype=".tent" buttonid=".tent"><a>tent</a></li>
+                <li class="button display" filtertype=".display" buttonid=".display"><a>display</a></li>
+
+            </ul>
+
         </div>
-
-
     </div>
 
     <div class="container">

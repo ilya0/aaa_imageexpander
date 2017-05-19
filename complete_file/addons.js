@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 
     function hideexcept() {
-        alert("hiding all except " + buttonpressed);
+        // alert("hiding all except " + buttonpressed);
         $(".gridder-list").not(buttonpressed).hide();
         $(buttonpressed).show();
     }
@@ -12,6 +12,13 @@ $(document).ready(function () {
     function showall() {
         $(".gridder-list").show();
     }
+
+    function currentmenu() {
+        $(".button").removeClass("current-menu-item");
+        $(buttonpressed).addClass("current-menu-item")
+    }
+
+
 
 
 
@@ -22,7 +29,7 @@ $(document).ready(function () {
             buttonpressed = $(this).attr('filtertype');
             hideexcept();
         }
-
+        currentmenu();
     });
 
 
